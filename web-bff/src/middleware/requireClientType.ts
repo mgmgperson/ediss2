@@ -9,7 +9,7 @@ export function requireClientType(expectedClientType: 'Web' | 'iOS' | 'Android')
       return;
     }
 
-    if (clientType !== expectedClientType) {
+    if (clientType.trim().toLowerCase() !== expectedClientType.toLowerCase()) {
       res.sendStatus(400);
       return;
     }
